@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!------ Include the above in your HEAD tag ---------->
+
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+                <h3>Oriental.<span style="color:#f39514">UP</span></h3>
+                <p class="text-justify">Les informations que vous voulez bien nous transmettre en répondant au formulaire seront analysées confidentiellement.<br> Elles nous permettront de comprendre votre projet et de vous donner un premier avis</p>
+            </div>
+            <div class="col-md-9 register-right">
+
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Formulaire</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="py-2"><strong>First Name: </strong></label>
+                                    <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="py-2"><strong>Last Name: </strong></label>
+
+                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="py-2"><strong>Si vous êtes étudiant, quelle formation suivez-vous actuellement et en quelle année ?:</strong></label>
+
+                                    <input type="text" class="form-control" placeholder="Ex: Master" value="" />
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="py-2"><strong>Email: </strong></label>
+
+                                    <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="py-2"><strong>Phone number: </strong></label>
+
+                                    <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="py-2"><strong>Si vous êtes déjà diplômé,
+                                        précisez votre diplôme et l’année d’obtention</strong></label><br><br>
+
+                                    <input type="text" class="form-control" placeholder="Ex: Licence mathématique" value="" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="custom-search">
+                                    <label for="" class="text-justify py-3"><strong>Si vous menez ce projet avec d’autres personnes réellement impliquées, précisez leurs noms et décrivez brièvement leurs profils : </strong></label>
+                                    <textarea rows="5" class="custom-search-input form-control py-3" style="border-radius: 22px;" name="projetAutresPersonnes"> </textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-search">
+                                    <label class="text-justify py-3"><strong>A qui sont-ils destinés ? </strong></label>
+                                    <textarea rows="5" class="custom-search-input form-control py-3" placeholder=" " style="border-radius: 22px; min-width: 100%;" name="destines"> </textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-justify py-3"><strong>Existent-ils des entreprises avec des objectifs comparables qui fonctionnent au Maroc ou dans d’autres pays?</strong> </label>
+                                <div class="maxl">
+                                    <label class="radio inline">
+                                    <input onclick="displaytexaera(value);" type="radio" name="radio1" value="Non">
+                                    <span><strong>Non</strong></span>
+                                  </label>
+                                    <label class="radio inline">
+                                    <input onclick="displaytexaera(value);" type="radio" name="radio1" value="Oui">
+                                    <span><strong>Oui</strong></span>
+                                  </label>
+                                </div>
+                                <!-- entreprises -->
+                                <div class="custom-search">
+                                    <label class="py-3"><strong>Si oui, le(s) quelle(s)? </strong></label>
+                                    <textarea id="textareaVide1" rows="5" class="custom-search-input form-control" placeholder="" style="border-radius: 22px;display: none;" name="entreprises"> </textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-search">
+                                    <label class="text-justify py-3"><strong>Si votre projet nécessite des développements digitaux (logiciels, plateforme, …), décrivez les succinctement ainsi que leur éventuel état d’avancement :
+                                </strong></label></div><strong>
+                                <textarea rows="5" class="custom-search-input form-control" placeholder=" " style="border-radius: 22px;" name="etat_avancement_digital"> </textarea>
+                              </strong>
+                            </div>
+                            <!-- RADIO BUTTONS ========================================-->
+                            <strong>
+
+                            <div class="form-group">
+                                <label class="py-3"><strong>Avez-vous déjà élaboré un business plan? </strong></label>
+                            <div class="maxl">
+                                <label class="radio inline">
+                                      <input type="radio" name="radio2" value="Non">
+                                      <span><strong>Non  </strong></span>
+                                    </label>
+                                <label class="radio inline">
+                                      <input type="radio" name="radio2" value="Oui">
+                                      <span><strong>Oui</strong></span>
+                                    </label>
+                            </div>
+
+                        </div>
+
+                        <!-- businessPlan -->
+                        <!-- For radio buttons don't put them in one div -->
+                        <div class="form-group">
+                            <div class="py-3">
+                                <label class="py-3"><strong>Diriez-vous que votre projet ?</strong></label><br>
+                                <div class="maxl">
+
+                                    <label class="radio-inline"><input type="radio" name="idee_simple" value="encore à l’état d’une simple idée"> <span>  Est encore à l’état d’une simple idée</span> </label>
+
+                                    <label class="radio-inline"><input type="radio" name="avance_non_commercialise" value="déjà bien avancé mais n’est pas commercialisé"> <span> Est déjà bien avancé mais n’est pas commercialisé</span> </label><br>
+
+                                    <label class="radio-inline"><input type="radio" name="premiers_client" value="permis d’avoir des premiers clients"> <span> A permis d’avoir des premiers clients</span> </label><br>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  produitsOuServices-->
+                        <div class="form-group">
+                            <div class="custom-search">
+                                <label for=""><strong>Quels produits ou services offrez-vous ou souhaitez-vous offrir? </strong></label>
+                                <textarea rows="5" class="custom-search-input form-control" style="border-radius: 22px; margin-top: 20px;" name="produitsOuServices"> </textarea>
+                            </div>
+                        </div>
+                        <!-- prix -->
+                        <div class="form-group">
+                            <div class="custom-search">
+                                <label for=""><strong>A quel prix pensez-vous vendre vos produits ou services (si votre réflexion est suffisamment avancée sur ce point)</strong></label>
+                                <textarea rows="5" class="custom-search-input form-control" placeholder=" " style="border-radius: 22px; margin-top: 20px;" name="prix"> </textarea>
+                            </div>
+                        </div>
+                        <!-- offres -->
+                        <div class="form-group">
+                            <div class="custom-search">
+                                <label for=""><strong>Quels sont les principaux (2 ou 3) avantages de votre offre par rapport à la concurrence existante ou à des offres voisines ?</strong> </label>
+                                <textarea rows="5" class="custom-search-input form-control" placeholder="" style="border-radius: 22px; margin-top: 20px;" name="offres"> </textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h6><strong>Avez-vous commencé à communiquer sur le Web?</strong></h6>
+                            <div class="py-3">
+                                <label class="radio inline">
+                                      <input onclick="displaytexaera1(value);" type="radio" name="Choix1" value="Non" checked="">
+                                      <span><strong>Non</strong></span>
+                                    </label>
+                                <label class="radio inline">
+                                      <input onclick="displaytexaera1(value);" type="radio" name="Choix1" value="Oui">
+                                      <span><strong>Oui</strong></span>
+                                    </label>
+                            </div>
+                            <div class="custom-search">
+                                <label for=""><strong>Si oui, comment</strong></label>
+                                <textarea id="textareaVide2" rows="5" class="custom-search-input form-control" placeholder="" style="border-radius: 22px; margin-top: 20px;display: none;" name="communiquer"> </textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label><strong>Que vous manque-t-il pour réussir? </strong></label>
+                            <div class="custom-search py-3">
+                                <label for=""><strong>En premier</strong></label>
+                                <textarea rows="2" class="custom-search-input form-control py-3" placeholder=" " style="border-radius: 22px;" name="enPremier"> </textarea>
+                                <label for=""><strong>En second</strong></label>
+                                <textarea rows="2" class="custom-search-input form-control py-3" placeholder="  " style="border-radius: 22px;" name="enSecond"> </textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btnRegister text-center" name="send">Envoyer</button>
+                        <!-- </strong> -->
+
+                    </div>
+                </div>
+                <!--============================================
+                    ============================================
+                    ============================================
+                    ============================================
+                    ============================================
+                    ============================================
+                    =========ADD FOOTER HERE LATER==============
+                    ============================================
+                    ============================================
+                    ============================================
+                    ============================================
+                    ============================================
+                    ============================================
+                    ============================================
+                    ============================================
+                -->
+
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
